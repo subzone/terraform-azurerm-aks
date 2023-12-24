@@ -33,7 +33,7 @@ variable "resource_group_name" {
   description = "rg name"
 }
 
-variable "location" {
+variable "resource_group_location" {
   type = string
   description = "location to deploy resources"
 }
