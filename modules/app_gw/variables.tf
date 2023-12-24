@@ -42,3 +42,8 @@ variable "app_gw_subnet_id" {
   type = string
   description = "app gw subnet id"
 }
+
+variable "vnet_name" {
+  type = string
+  description = "new vnet name"
+}
