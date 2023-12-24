@@ -51,4 +51,5 @@ module "app_gateway" {
   resource_group_name = module.resource_group.resource_group_name
   public_ip_address_id = module.public_ip.public_ip_address_id
   app_gw_ip_conf_name = var.app_gw_ip_conf_name
+  vnet_name = var.vnet_name
 }
