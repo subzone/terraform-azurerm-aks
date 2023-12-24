@@ -19,7 +19,7 @@ variable "cidr_space" {
 }
 
 variable "subnet_address_prefix" {
-  type = string
+  type = list(any)
   description = "adress space for subnet"
 }
 

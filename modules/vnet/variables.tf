@@ -8,7 +8,7 @@ variable "cidr_space" {
     description = "cidr for vnet"
 }
 
-variable "subnet_address_prefixes" {
+variable "subnet_address_prefix" {
   type = list(any)
   description = "adress space for subnet"
 }
