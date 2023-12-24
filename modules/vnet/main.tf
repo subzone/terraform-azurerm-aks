@@ -1,4 +1,4 @@
-resource "azurerm_network_security_group" "nsg" {
+resource "azurerm_network_security_group" "this" {
   name                = var.vnet_name
   location            = var.resource_group_location
   resource_group_name = var.resource_group_name
@@ -11,10 +11,17 @@ resource "azurerm_virtual_network" "this" {
   address_space       = var.cidr_space
   dns_servers         = var.dns_servers
 
-  subnet {
-    name           = var.subnet_name
-    address_prefix = var.subnet_address_prefix
-    security_group = azurerm_network_security_group.nsg.id
-  }
   tags = var.tags
+}
+
+resource "azurerm_subnet" "this" {
+  name                 = var.subnet_name
+  resource_group_name  = var.resource_group_name
+  virtual_network_name = var.resource_group_location
+  address_prefixes     = var.subnet_address_prefixes
+}
+
+resource "azurerm_subnet_network_security_group_association" "example" {
+  subnet_id                 = azurerm_subnet.this.id
+  network_security_group_id = azurerm_network_security_group.this.id
 }
