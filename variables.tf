@@ -62,3 +62,28 @@ variable "aks_name" {
   type = string
   description = "AKS name"
 }
+
+variable "app_gw_name" {
+  type = string
+  description = "application gateway name"
+}
+
+variable "app_gw_sku" {
+  type = string
+  description = "app gw sku"
+}
+
+variable "app_gw_tier" {
+  type = string
+  description = "app gw tier"
+}
+
+variable "app_gw_capacity" {
+  type = string
+  description = "app gw capacity"
+}
+
+variable "app_gw_ip_conf_name" {
+  type = string
+  description = "app gw ip configuration name"
+}
