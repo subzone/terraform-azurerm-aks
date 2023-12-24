@@ -16,7 +16,5 @@ resource "azurerm_virtual_network" "this" {
     address_prefix = var.subnet_address_prefix
     security_group = azurerm_network_security_group.nsg.id
   }
-
-
   tags = var.tags
 }

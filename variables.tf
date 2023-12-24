@@ -37,3 +37,28 @@ variable "subnet_name" {
   type = string
   description = "new subnet name" 
 }
+
+variable "aks_dns_prefix" {
+  type = string
+  description = "AKS dns prefix" 
+}
+
+variable "aks_node_pool_name" {
+  type = string
+  description = "node pool name"
+}
+
+variable "node_count" {
+    type = number
+    description = "number of nodes"  
+}
+
+variable "node_pool_vm_size" {
+    type = string
+    description = "VM size for nodes"
+}
+
+variable "aks_name" {
+  type = string
+  description = "AKS name"
+}
