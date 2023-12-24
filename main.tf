@@ -47,8 +47,8 @@ module "app_gateway" {
   app_gw_subnet_id = module.vnet.subnet_id
   app_gw_capacity = var.app_gw_capacity
   app_gw_name = var.app_gw_name
-  resource_group_location = module.resource_group.resource_group_location
-  resource_group_name = module.resource_group.resource_group_name
+  resource_group_location = var.resource_group_location
+  resource_group_name = var.resource_group_name
   public_ip_address_id = module.public_ip.public_ip_address_id
   app_gw_ip_conf_name = var.app_gw_ip_conf_name
   vnet_name = var.vnet_name
