@@ -87,3 +87,14 @@ variable "app_gw_ip_conf_name" {
   type = string
   description = "app gw ip configuration name"
 }
+
+variable "pip_allocation_method" {
+    type = string
+    default = "Static"
+    description = "Public IP type static/dynamic"
+}
+
+variable "public_ip_name" {
+  type = string
+  description = "Name for public IP"
+}
